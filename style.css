@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  font-family: 'Helvetica', sans-serif;
+  color: #333;
+}
+
+/* Contenedor principal */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;            /* Ocupa toda la altura de la ventana */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Vídeo como fondo */
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;        /* Cubrir todo el contenedor sin deformarse */
+  z-index: 0;
+}
+
+/* Contenido encima del vídeo */
+.hero__content {
+  position: relative;
+  z-index: 1;               /* Sobre el vídeo */
+  text-align: center;
+  color: #ffffff;           /* Asegúrate de que contraste */
+  padding: 0 1rem;
+}
+
+/* Ajustes responsivos */
+@media (max-aspect-ratio: 16/9) {
+  .hero__video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background: #F0F0F0;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.contenido {
+  padding: 20px;
+  max-width: 960px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin-top: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background: #F0F0F0;
+  font-size: 0.9rem;
+}
+
+.carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+.equipo-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.equipo-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.equipo-carousel-track .miembro {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.equipo-carousel-track img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.equipo-carousel-track h3 {
+  margin: 10px 0 5px;
+}
+
+.equipo-carousel-track p {
+  font-size: 0.9rem;
+  color: #555;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.instagram-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.instagram-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+.instagram-icon:hover {
+  transform: scale(1.1);
+}
+
+

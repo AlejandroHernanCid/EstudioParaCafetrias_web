@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Estudio Latte</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 40px;
+      background-color: #f7f6f3;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input, textarea, button {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #b08c6f;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #a0795f;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contacto</h1>
+  <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
+   
+
+  <form action="gracias.html" method="POST">
+  <input type="text" name="nombre" required placeholder="Nombre">
+  <input type="email" name="email" required placeholder="Correo electrónico">
+  <textarea name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+
+  <!-- Redirección tras envío -->
+  <input type="hidden" name="_next" value="https://index.html/gracias.html">
+
+  <!-- Evita el captcha de FormSubmit -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <button type="submit">Enviar</button>
+</form>
+
+
+  <script>
+  function resetForm() {
+    setTimeout(() => {
+      document.querySelector("form").reset();
+    }, 1000);
+  }
+</script>
+
+
+</body>
+</html>
