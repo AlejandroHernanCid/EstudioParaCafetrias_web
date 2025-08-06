@@ -5,17 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto | Estudio Latte</title>
   <style>
+
     body {
-      font-family: sans-serif;
-      margin: 40px;
-      background-color: #f7f6f3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    input{
+      font-family: 'Poppins', sans-serif;
+    }
+
+    textarea{
+      font-family: 'Poppins', sans-serif;
+    }
+
+    p {
+      line-height: 1.6;
+      letter-spacing: 0.5px;
+      font-family: 'Poppins', sans-serif;
+    }
+
     form {
       max-width: 500px;
       margin: auto;
       display: flex;
       flex-direction: column;
       gap: 15px;
+      flex: 1;
     }
     input, textarea, button {
       padding: 10px;
@@ -27,16 +50,47 @@
       color: white;
       border: none;
       cursor: pointer;
+      font-family: 'Poppins', sans-serif;
     }
     button:hover {
       background-color: #a0795f;
     }
+    #header_contacto{
+      text-align: center;
+      padding: 40px 20px;
+    }
+    footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+     background: #B38B59;
+     font-size: 0.9rem;
+    }
+    .instagram-link {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+    .instagram-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+}
+
+    .instagram-icon:hover {
+  transform: scale(1.1);
+}
+
+
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <h1>Contacto</h1>
-  <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
+  <div id="header_contacto">
+      <h1>Contacto</h1>
+      <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
+  </div>
+  
    
 
   <form action="gracias.html" method="POST">
@@ -52,6 +106,12 @@
 
   <button type="submit">Enviar</button>
 </form>
+<footer>
+    <p>&copy; 2025 Estudio Latte.</p>
+    <a href="https://www.instagram.com/quadratmeta/" target="_blank" class="instagram-link">
+    <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
+  </a>
+</footer>
 
 
   <script>
