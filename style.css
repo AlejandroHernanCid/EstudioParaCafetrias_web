@@ -75,10 +75,17 @@ p {
 }
 
 
-.navbar a {
-  text-decoration: none;
+nav a {
+  text-decoration: none; /* Sin subrayado por defecto */
   color: #333;
-  font-weight: bold;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  padding: 8px 12px;
+}
+
+nav a:hover {
+  text-decoration: wavy; /* Subrayado al pasar el cursor */
+  color: #000000; /* Puedes cambiar el color del texto si quieres */
 }
 
 .contenido {
@@ -191,5 +198,17 @@ footer {
 .instagram-icon:hover {
   transform: scale(1.1);
 }
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+
 
 

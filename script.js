@@ -36,4 +36,14 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", () => {
     setTimeout(() => form.reset(), 100); // espera breve para que se envíe antes de limpiar
   });
+
+  document.querySelectorAll('.fade-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.add('fade-out');
+      setTimeout(() => {
+        window.location.href = this.href;
+      }, 2000);
+    });
+  });
 });
