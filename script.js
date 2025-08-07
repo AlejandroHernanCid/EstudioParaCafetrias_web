@@ -47,3 +47,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//Modo oscuro || modo claro
+const botonModo = document.querySelector('#modo');
+
+function actualizarIcono() {
+  botonModo.textContent = document.body.classList.contains('modo-oscuro') ? '☀️' : '🌙';
+}
+
+botonModo.addEventListener('click', () => {
+  document.body.classList.toggle('modo-oscuro');
+  actualizarIcono();
+
+  // Animación
+  botonModo.classList.add('animado');
+  setTimeout(() => botonModo.classList.remove('animado'), 300);
+
+  // Guardar preferencia
+  localStorage.setItem('modo', document.body.classList.contains('modo-oscuro') ? 'oscuro' : 'claro');
+});
+
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('modo') === 'oscuro') {
+    document.body.classList.add('modo-oscuro');
+  }
+  actualizarIcono();
+});
+
+
