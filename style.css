@@ -1,11 +1,25 @@
-body {
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Poppins', 'Helvetica', sans-serif;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
   background-color: #f7f6f3;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
 }
 
+/* ------------------------ */
+/* Dark Mode               */
+/* ------------------------ */
 body.modo-oscuro {
   background-color: #1e1e1e;
   color: #f5f5f5;
@@ -20,17 +34,17 @@ body.modo-oscuro {
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
+  z-index: 10000;
 }
 
 .modo-toggle.animado {
   transform: rotate(180deg);
 }
 
+/* ------------------------ */
+/* Encabezados, párrafos    */
+/* ------------------------ */
 h1, h2, h3 {
-  font-family: 'Poppins', sans-serif;
-}
-
-button {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -39,19 +53,34 @@ p {
   letter-spacing: 0.5px;
 }
 
+/* ------------------------ */
+/* Botones                  */
+/* ------------------------ */
+button {
+  font-family: 'Poppins', sans-serif;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
 
-/* Contenedor principal */
+button:hover {
+  opacity: 0.9;
+}
+
+/* ------------------------ */
+/* Header vídeo (index)     */
+/* ------------------------ */
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;            /* Ocupa toda la altura de la ventana */
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* Vídeo como fondo */
 .hero__video {
   position: absolute;
   top: 50%;
@@ -61,28 +90,21 @@ p {
   min-width: 100%;
   min-height: 100%;
   transform: translate(-50%, -50%);
-  object-fit: cover;        /* Cubrir todo el contenedor sin deformarse */
+  object-fit: cover;
   z-index: 0;
 }
 
-/* Contenido encima del vídeo */
 .hero__content {
   position: relative;
-  z-index: 1;               /* Sobre el vídeo */
+  z-index: 1;
   text-align: center;
-  color: #ffffff;           /* Asegúrate de que contraste */
+  color: #fff;
   padding: 0 1rem;
 }
 
-/* Ajustes responsivos */
-@media (max-aspect-ratio: 16/9) {
-  .hero__video {
-    width: 100%;
-    height: auto;
-  }
-}
-
-
+/* ------------------------ */
+/* Navegación               */
+/* ------------------------ */
 .navbar {
   display: flex;
   justify-content: center;
@@ -92,23 +114,24 @@ p {
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 9999;      /* <- aquí el truco */
+  z-index: 999;
 }
 
-
 nav a {
-  text-decoration: none; /* Sin subrayado por defecto */
+  text-decoration: none;
   color: #333;
-  transition: all 0.3s ease;
-  font-family: 'Poppins', sans-serif;
   padding: 8px 12px;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  text-decoration: wavy; /* Subrayado al pasar el cursor */
-  color: #000000; /* Puedes cambiar el color del texto si quieres */
+  text-decoration: wavy;
+  color: #000;
 }
 
+/* ------------------------ */
+/* Contenido general        */
+/* ------------------------ */
 .contenido {
   padding: 20px;
   max-width: 960px;
@@ -119,90 +142,44 @@ section {
   margin-bottom: 30px;
 }
 
+/* ------------------------ */
+/* Formularios (contacto)   */
+/* ------------------------ */
 form {
+  flex: 1;
+  max-width: 500px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 400px;
-  margin-top: 10px;
+  gap: 15px;
 }
 
 input, textarea {
   padding: 10px;
   font-size: 1rem;
+  border: 1px solid #ccc;
   width: 100%;
-  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-button {
-  padding: 10px;
-  background-color: #000;
-  color: white;
-  border: none;
-  cursor: pointer;
+button[type="submit"] {
+  background-color: #B38B59;
+  color: #fff;
 }
 
+button[type="submit"]:hover {
+  background-color: #a0795f;
+}
+
+/* ------------------------ */
+/* Footer                   */
+/* ------------------------ */
 footer {
   text-align: center;
   padding: 10px;
   background: #B38B59;
   font-size: 0.9rem;
-}
-
-.carousel-container {
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  width: 100%;
-}
-
-.carousel-track img {
-  width: 100%;
-  flex: 0 0 100%;
-  object-fit: cover;
-}
-
-.equipo-carousel-container {
-  overflow: hidden;
-  width: 100%;
-  max-width: 800px;
-  margin: 20px auto;
-}
-
-.equipo-carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.equipo-carousel-track .miembro {
-  flex: 0 0 100%;
-  text-align: center;
-  padding: 20px;
-}
-
-.equipo-carousel-track img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-
-.equipo-carousel-track h3 {
-  margin: 10px 0 5px;
-}
-
-.equipo-carousel-track p {
-  font-size: 0.9rem;
-  color: #555;
-  max-width: 500px;
-  margin: 0 auto;
+  margin-top: auto;
 }
 
 .instagram-link {
@@ -219,8 +196,49 @@ footer {
 .instagram-icon:hover {
   transform: scale(1.1);
 }
+
+/* ------------------------ */
+/* Carrusel de proyectos    */
+/* ------------------------ */
+.carousel-container,
+.equipo-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.carousel-track,
+.equipo-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: cover;
+}
+
+.equipo-carousel-track .miembro {
+  flex: 0 0 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+.equipo-carousel-track img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* ------------------------ */
+/* Fade-out al cambiar página */
+/* ------------------------ */
 .fade-out {
-  animation: fadeOut 5s forwards;
+  animation: fadeOut 2s forwards;
 }
 
 @keyframes fadeOut {
@@ -229,7 +247,3 @@ footer {
     transform: translateY(10px);
   }
 }
-
-
-
-

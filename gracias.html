@@ -2,63 +2,17 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Gracias</title>
-  <meta http-equiv="refresh" content="3; url=index.html"> <!-- redirige tras 3 seg -->
+  <meta http-equiv="refresh" content="3; url=index.html">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gracias | Estudio Latte</title>
 
-  <style>
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-
-.contenido-gracias {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
-  text-align: center;
-}
-
- footer {
-  text-align: center;
-  padding: 10px;
-  background: #B38B59;
-  font-size: 0.9rem;
-}
-
-
-h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-    }
-    
-p{
-  font-family: 'Poppins', sans-serif;
-}    
-    .instagram-link {
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-    .instagram-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
-
-    .instagram-icon:hover {
-  transform: scale(1.1);
-}
-  </style>
+  <!-- Tipografía y CSS compartido -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="contenido-gracias">
+  <div class="contenido-gracias" style="flex:1; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:40px 20px; text-align:center;">
     <h1>¡Gracias por contactar con Estudio Latte!</h1>
-    <p>Redirigiendo a la página principal ☕☕☕ </p>
+    <p>Redirigiendo a la página principal ☕☕☕</p>
   </div>
 
   <footer>
@@ -67,7 +21,9 @@ p{
       <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
     </a>
   </footer>
+
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="modo.js" defer></script>
 </body>
-
 </html>
-

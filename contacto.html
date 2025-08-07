@@ -2,125 +2,38 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contacto | Estudio Latte</title>
-  <style>
 
-    body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    }
-
-    h1, h2, h3 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-    input{
-      font-family: 'Poppins', sans-serif;
-    }
-
-    textarea{
-      font-family: 'Poppins', sans-serif;
-    }
-
-    p {
-      line-height: 1.6;
-      letter-spacing: 0.5px;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    form {
-      max-width: 500px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      flex: 1;
-    }
-    input, textarea, button {
-      padding: 10px;
-      font-size: 16px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background-color: #B38B59;
-      color: white;
-      border: none;
-      cursor: pointer;
-      font-family: 'Poppins', sans-serif;
-    }
-    button:hover {
-      background-color: #a0795f;
-    }
-    #header_contacto{
-      text-align: center;
-      padding: 40px 20px;
-    }
-    footer {
-  text-align: center;
-  padding: 10px;
-  background: #B38B59;
-  font-size: 0.9rem;
-}
-    .instagram-link {
-    display: inline-block;
-    margin-top: 10px;
-  }
-
-    .instagram-icon {
-  width: 32px;
-  height: 32px;
-  transition: transform 0.2s ease;
-}
-
-    .instagram-icon:hover {
-  transform: scale(1.1);
-}
-
-
-  </style>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Tipografía y CSS compartido -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="header_contacto">
-      <h1>Contacto</h1>
-      <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
+  <div id="header_contacto" style="text-align:center; padding:40px 20px;">
+    <h1>Contacto</h1>
+    <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
   </div>
-  
-   
 
-  <form action="gracias.html" method="POST">
-  <input type="text" name="nombre" required placeholder="Nombre y apellidos">
-  <input type="email" name="email" required placeholder="Correo electrónico">
-  <textarea name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
+  <form id="contactForm" action="gracias.html" method="POST">
+    <input type="text" name="nombre" required placeholder="Nombre y apellidos">
+    <input type="email" name="email" required placeholder="Correo electrónico">
+    <textarea name="mensaje" required placeholder="Escribe tu mensaje"></textarea>
 
-  <!-- Redirección tras envío -->
-  <input type="hidden" name="_next" value="https://index.html/gracias.html">
+    <!-- Redirección tras envío -->
+    <input type="hidden" name="_next" value="gracias.html">
+    <input type="hidden" name="_captcha" value="false">
+    <button type="submit">Enviar</button>
+  </form>
 
-  <!-- Evita el captcha de FormSubmit -->
-  <input type="hidden" name="_captcha" value="false">
-
-  <button type="submit">Enviar</button>
-</form>
-<footer>
+  <footer>
     <p>&copy; 2025 Estudio Latte.</p>
     <a href="https://www.instagram.com/quadratmeta/" target="_blank" class="instagram-link">
-    <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
-  </a>
-</footer>
+      <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
+    </a>
+  </footer>
 
-
-  <script>
-  function resetForm() {
-    setTimeout(() => {
-      document.querySelector("form").reset();
-    }, 1000);
-  }
-</script>
-
-
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="modo.js" defer></script>
 </body>
 </html>

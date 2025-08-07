@@ -2,30 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Favicon básico -->
-  <link rel="icon" href="icon/iconoWeb.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Estudio Latte</title>
+
+  <!-- Tipografía y CSS compartido -->
   <link rel="stylesheet" href="style.css">
-  <!-- Añade esto en <head> de tu HTML -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
-
-
-   
 </head>
 <body>
   <header class="hero">
-  <video class="hero__video" autoplay muted loop playsinline poster="videos/video-poster.jpg">
-    <source src="videos/video-header.mp4" type="video/mp4">
-    Tu navegador no soporta videos HTML5.
-  </video>
-  <div class="hero__content">
-    <h1>Estudio Latte</h1>
-    <p>"Diseñamos espacios que se saborean"</p>
-  </div>
-  <button id="modo" class="modo-toggle">☀️ Cambiar modo</button>  
-</header>
-
+    <video class="hero__video" autoplay muted loop playsinline poster="videos/video-poster.jpg">
+      <source src="videos/video-header.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <div class="hero__content">
+      <h1>Estudio Latte</h1>
+      <p>"Diseñamos espacios que se saborean"</p>
+    </div>
+    <button id="modo" class="modo-toggle">🌙</button>
+  </header>
 
   <nav class="navbar">
     <a href="#servicios">Servicios</a>
@@ -37,53 +31,54 @@
   <main class="contenido">
     <section id="servicios">
       <h2>Servicios</h2>
-      
-      <p><span style="color: #B38B59;"><strong>En Estudio Latte diseñamos espacios con alma.</strong></span><br><br>
-Nos especializamos en la creación y ambientación de cafeterías, coffee shops y espacios gastronómicos, cuidando cada detalle desde la distribución hasta los acabados.
-Ofrecemos un servicio integral de diseño de interiores que combina funcionalidad, estética y experiencia de cliente.</p>
+      <p><strong style="color: #B38B59;">En Estudio Latte diseñamos espacios con alma.</strong>
+      Nos especializamos en la creación y ambientación de cafeterías, coffee shops y espacios gastronómicos, cuidando cada detalle desde la distribución hasta los acabados. Ofrecemos un servicio integral de diseño de interiores que combina funcionalidad, estética y experiencia de cliente.</p>
     </section>
 
     <section id="proyectos">
-  <h2>Proyectos</h2>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <img src="imagenes/imagen1.jpg" alt="Proyecto 1">
-      <img src="imagenes/imagen2.jpg" alt="Proyecto 2">
-      <img src="imagenes/imagen3.jpg" alt="Proyecto 3">
-      <!-- Puedes añadir más imágenes -->
-    </div>
-  </div>
-</section>
+      <h2>Proyectos</h2>
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <img src="imagenes/imagen1.jpg" alt="Proyecto 1">
+          <img src="imagenes/imagen2.jpg" alt="Proyecto 2">
+          <img src="imagenes/imagen3.jpg" alt="Proyecto 3">
+        </div>
+      </div>
+    </section>
 
     <section id="equipo">
-  <h2>Nuestro Equipo</h2>
-  <div class="equipo-carousel-container">
-    <div class="equipo-carousel-track">
-      <div class="miembro">
-        <img src="imagenes/mujer1.jpg" alt="Ana Gómez">
-        <h3>Ana Gómez</h3>
-        <p>Directora Creativa. Especialista en diseño de espacios sensoriales para cafeterías.</p>
+      <h2>Nuestro Equipo</h2>
+      <div class="equipo-carousel-container">
+        <div class="equipo-carousel-track">
+          <div class="miembro">
+            <img src="imagenes/mujer1.jpg" alt="Ana Gómez">
+            <h3>Ana Gómez</h3>
+            <p>Directora Creativa. Especialista en diseño de espacios sensoriales para cafeterías.</p>
+          </div>
+          <div class="miembro">
+            <img src="imagenes/hombre.jpg" alt="David López">
+            <h3>David López</h3>
+            <p>Diseñador de interiores. Creador de ambientes funcionales con estilo moderno.</p>
+          </div>
+          <div class="miembro">
+            <img src="imagenes/mujer2.jpg" alt="Lucía Torres">
+            <h3>Lucía Torres</h3>
+            <p>Especialista en mobiliario a medida. Amante de los materiales naturales y el diseño artesanal.</p>
+          </div>
+        </div>
       </div>
-      <div class="miembro">
-        <img src="imagenes/hombre.jpg" alt="David López">
-        <h3>David López</h3>
-        <p>Diseñador de interiores. Creador de ambientes funcionales con estilo moderno.</p>
-      </div>
-      <div class="miembro">
-        <img src="imagenes/mujer2.jpg" alt="Lucía Torres">
-        <h3>Lucía Torres</h3>
-        <p>Especialista en mobiliario a medida. Amante de los materiales naturales y el diseño artesanal.</p>
-  </div>
-</section>
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Estudio Latte.</p>
     <a href="https://www.instagram.com/quadratmeta/" target="_blank" class="instagram-link">
-    <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
-  </a>
+      <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
+    </a>
   </footer>
 
-   <script defer src="script.js"></script>
+  <!-- Scripts -->
+  <script src="script.js" defer></script>
+  <script src="modo.js" defer></script>
 </body>
 </html>
