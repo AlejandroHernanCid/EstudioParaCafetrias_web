@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+   <div id="page-wrapper" class="page">
   <div id="header_contacto" style="text-align:center; padding:40px 20px;">
     <h1>Contacto</h1>
     <p>¿Tienes una cafetería en mente? Escríbenos y hablemos.</p>
@@ -25,15 +26,22 @@
     <button type="submit">Enviar</button>
   </form>
 
+  <!-- Botón “Volver al inicio” -->
+  <div class="back-button-container">
+    <a href="index.html" class="back-button">← Volver al inicio</a>
+  </div>
+
   <footer>
     <p>&copy; 2025 Estudio Latte.</p>
     <a href="https://www.instagram.com/quadratmeta/" target="_blank" class="instagram-link">
       <img src="imagenes/icon-instagram.png" alt="Instagram" class="instagram-icon">
     </a>
   </footer>
-
+  
+</div>
   <!-- Scripts -->
   <script src="script.js" defer></script>
   <script src="modo.js" defer></script>
+  <script src="transitions.js"></script>
 </body>
 </html>
